@@ -1,5 +1,14 @@
 <?php 
-	include_once("config/url.php");
+
+include_once("config/url.php");
+include_once("config/processamento.php");
+
+// Limpa a mensagem da sessão
+if(isset($_SESSION['msg'])){
+    $printMsg = $_SESSION['msg'];
+    $_SESSION['msg'] = '';
+}
+
 ?>
 
  <!DOCTYPE html>
@@ -20,7 +29,7 @@
         <div class="container">
           <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
             <a href="<?= $BASE_URL ?>index.php" class="d-flex align-items-center mb-2 mb-lg-0 text-dark text-decoration-none">
-              <svg class="bi me-2" width="40" height="32" role="img" aria-label="Bootstrap"><use xlink:href="#bootstrap"></use></svg>
+              <img src="https://cdn-icons-png.flaticon.com/512/179/179871.png" width="40" height="40" role="img" aria-label="Bootstrap"><use xlink:href="#bootstrap"></use></svg>
             </a>
 
             <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
