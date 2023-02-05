@@ -28,7 +28,8 @@ if(!empty($data)) {
 	$stmt->execute();
 	$_SESSION["msg"] = "Contato adicionado com sucesso!";
 
-} /*Alterar contato no banco*/ else if($data["type"] === "edit") {
+} //Alterar contato no banco
+	else if($data["type"] === "edit") {
 
 	$nome = $data["nome"];
 	$telefone = $data["telefone"];
@@ -48,6 +49,19 @@ if(!empty($data)) {
 
 	$stmt->execute();
 	$_SESSION["msg"] = "Contato alterado com sucesso!";
+
+} //Deletar contato no banco
+	else if($data["type"] === "delete") {
+
+	$id = $data["id"];
+
+	$query = "DELETE FROM contatos WHERE id = :id";
+
+	$stmt = $conn->prepare($query);
+
+	$stmt->bindParam(":id", $id);
+	$stmt->execute();
+	$_SESSION["msg"] = "Contato excluído com sucesso!";
 
 }
 

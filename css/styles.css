@@ -42,6 +42,10 @@
 	color: #6697CC;
 }
 
+.delete-form {
+	display: inline-block;
+}
+
 .delete-btn {
 	background-color: transparent;
 	border: none;
