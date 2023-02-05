@@ -4,7 +4,9 @@
 
 #main-title {
 	text-align: center;
-	margin: 15px 0 30px;
+	margin: 15px 0 20px;
+	font-size: 30px;
+	text-decoration: underline;
 }
 
 /* HOME */
@@ -15,7 +17,7 @@
 
 #contacts-table thead {
 	color: #FFF;
-	background-color: #007BFF;
+	background-color: #6697CC;
 }
 
 .col-id {
@@ -37,7 +39,7 @@
 }
 
 .edit-icon {
-	color: #007BFF;
+	color: #6697CC;
 }
 
 .delete-btn {
@@ -83,12 +85,24 @@
 }
 
 #back-link {
-	border: 1px solid #007BFF;
-	color: #007BFF;
+	border: 1px solid #6697CC;
+	color: #6697CC;
 	border-radius: 4px;
 	padding: 5px;
 }
 
-#back-link:hover {
+#back-link {
 	text-decoration: none;
+}
+
+#bt-cadastro {
+	background-color: #6697CC;
+	border: none;
+}
+
+/* CRIAR DADOS */
+#create-form,
+#edit-form {
+	max-width: 500px;
+	margin: 0 auto;
 }
