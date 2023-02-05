@@ -3,6 +3,7 @@
 ?>
 
 <div class="container" id="view-contact-container">
+    <?php include_once("templates/back.html"); ?>
     <h1 id="main-title"><?= $contato["nome"] ?></h1>
     <p class="bold">Telefone:</p>
     <p><?= $contato["telefone"] ?></p>
